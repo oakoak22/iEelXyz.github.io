@@ -1,56 +1,130 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #000;
-    color: #fff;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    height: 100vh;
+    font-family: 'Poppins', Arial, sans-serif;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('aa.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: center top; /* Menempatkan gambar di bagian atas tengah */
 }
 
-header {
-    position: relative;
-    z-index: 10;
-    text-align: center;
+/* Responsive Background for Mobile */
+@media (max-width: 600px) {
+    body {
+        background-size: cover; /* Mengatur background agar tetap penuh di layar kecil */
+        background-position: center 50%; /* Menggeser background agar lebih fokus pada wajah */
+    }
 }
 
-h1 {
-    font-size: 2.5em;
-    color: #00ffff;
+.profile-container {                                                                                text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#profile {
-    position: relative;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    backdrop-filter: blur(5px);
+.profile-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Efek bintang */
-@keyframes sparkle {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-.star {
-    position: absolute;
+.profile-image img {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.8);
-    width: 2px;
-    height: 2px;
-    animation: sparkle 1s infinite alternate;
+    margin-top: -70px;
+    border: 6px solid #1da0f7;                                                                      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}                                                                                               
+h1 {
+    margin: 20px 0 10px;
+    font-size: 24px;
+    font-weight: 600;
 }
 
-.star:nth-child(even) {
-    animation-duration: 1.5s;
+.role {
+    color: #555;
+    margin-bottom: 15px;
 }
 
-.star:nth-child(odd) {
-    animation-duration: 2s;
+.role span {
+    font-weight: bold;
+    color: #000;                                                                                }
+
+.location {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.location img {
+    margin-right: 8px;
+}
+
+.social-icons a img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.15);
+}
+
+
+.audio {
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .profile-container {
+        padding: 20px;
+    }
+
+    .profile-image img {
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .location {
+        font-size: 14px;
+    }
+
+    .social-icons a img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .message-btn {
+        font-size: 14px;
+        }
+
+    .social-icons a img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .message-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
 }
