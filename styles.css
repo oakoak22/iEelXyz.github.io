@@ -1,108 +1,90 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background: #000;
+    background-color: #000;
     color: #fff;
     margin: 0;
     padding: 0;
-    text-align: center;
     overflow: hidden;
-    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 header {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-bottom: 1px solid #333;
+    position: relative;
+    z-index: 10;
+    text-align: center;
 }
 
-main {
-    padding: 20px;
+h1 {
+    font-size: 2.5em;
+    color: #00ffff;
 }
 
-#profile, #interactive {
-    background: rgba(255, 255, 255, 0.1);
+#profile {
+    position: relative;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
-    display: inline-block;
-    margin: 10px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
 }
 
-#interactive {
-    margin-top: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background: #007bff;
-    color: #fff;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
-#time {
-    margin-top: 10px;
-}
-
-/* Star field effect */
-@keyframes sparkle {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-.star {
+.planets {
     position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.8);
-    width: 2px;
-    height: 2px;
-    animation: sparkle 1s infinite alternate;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
 }
 
-.star:nth-child(even) {
-    animation-duration: 1.5s;
-}
-
-.star:nth-child(odd) {
-    animation-duration: 2s;
-}
-
-/* Planet styles */
 .planet {
     position: absolute;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(0,0,0,1) 100%);
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-    opacity: 0.9;
+    background-size: cover;
+    animation: float 10s infinite ease-in-out;
+    opacity: 0.8;
 }
 
-.planet.one {
-    width: 150px;
-    height: 150px;
-    top: 10%;
-    left: 10%;
-    background: radial-gradient(circle, rgba(255,255,0,0.8) 0%, rgba(255,165,0,1) 70%, rgba(255,69,0,1) 100%);
-}
-
-.planet.two {
-    width: 100px;
-    height: 100px;
-    top: 40%;
-    left: 70%;
-    background: radial-gradient(circle, rgba(173,216,230,0.8) 0%, rgba(70,130,180,1) 70%, rgba(25,25,112,1) 100%);
-}
-
-.planet.three {
+.planet-1 {
     width: 200px;
     height: 200px;
-    top: 60%;
+    background: url('https://i.imgur.com/jw8JT4p.png') no-repeat center;
+    top: 20%;
+    left: 10%;
+    animation-duration: 12s;
+}
+
+.planet-2 {
+    width: 150px;
+    height: 150px;
+    background: url('https://i.imgur.com/KeJjKSA.png') no-repeat center;
+    top: 50%;
+    left: 70%;
+    animation-duration: 15s;
+}
+
+.planet-3 {
+    width: 250px;
+    height: 250px;
+    background: url('https://i.imgur.com/2fM1Dxu.png') no-repeat center;
+    top: 70%;
     left: 30%;
-    background: radial-gradient(circle, rgba(144,238,144,0.8) 0%, rgba(34,139,34,1) 70%, rgba(0,100,0,1) 100%);
+    animation-duration: 18s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
