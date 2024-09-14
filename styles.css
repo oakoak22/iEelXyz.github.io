@@ -1,26 +1,31 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: #000;
     color: #fff;
     margin: 0;
     padding: 0;
     text-align: center;
+    overflow: hidden;
+    position: relative;
 }
 
 header {
-    background: #111;
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
+    border-bottom: 1px solid #333;
 }
 
 main {
     padding: 20px;
 }
 
-#profile {
+#profile, #interactive {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
+    margin: 10px;
+    backdrop-filter: blur(10px);
 }
 
 #interactive {
@@ -35,6 +40,7 @@ button {
     background: #007bff;
     color: #fff;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 button:hover {
@@ -43,4 +49,27 @@ button:hover {
 
 #time {
     margin-top: 10px;
+}
+
+/* Star field effect */
+@keyframes sparkle {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.star {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    width: 2px;
+    height: 2px;
+    animation: sparkle 1s infinite alternate;
+}
+
+.star:nth-child(even) {
+    animation-duration: 1.5s;
+}
+
+.star:nth-child(odd) {
+    animation-duration: 2s;
 }
