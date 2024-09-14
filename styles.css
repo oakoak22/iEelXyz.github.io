@@ -54,14 +54,3 @@ h1 {
 .star:nth-child(odd) {
     animation-duration: 2s;
 }
-
-/* Kontainer bintang */
-.star-field {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    overflow: hidden;
-}
