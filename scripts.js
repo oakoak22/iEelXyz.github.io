@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Membuat efek bintang di latar belakang
     const numStars = 100;
     const starField = document.createElement('div');
     starField.style.position = 'absolute';
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         starField.appendChild(star);
     }
 
+    // Menampilkan waktu ketika tombol ditekan
     document.getElementById('showTimeButton').addEventListener('click', () => {
         const now = new Date();
         const timeString = now.toLocaleTimeString();
