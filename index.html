@@ -1,22 +1,69 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Angkasa</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .message-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px; /* Existing margin */
+            margin-bottom: 20px; /* Add margin-bottom for spacing */
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .message-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .profile-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>iEelXyz</h1>
-    </header>
-    <main>
-        <section id="profile">
-            <h2>Data Diri</h2>
-            <p><strong>Umur:</strong> Secret</p>
-            <p><strong>Gender:</strong> Cowok Lah</p>
-        </section>
-    </main>
-    <script src="scripts.js"></script>
+    <div class="profile-container">
+        <div class="profile-card">
+            <div class="profile-image">
+                <img src="pp.jpg" alt="Profile Picture">
+            </div>
+            <h1>iRazzGanz</h1>
+            <p class="role">"Hidup ini seperti pensil yang lama lama akan habis, tetapi akan me>
+            <p class="role">GrowTop PS developer from <span>Indonesia</span></p>
+            <p class="location">
+                <img src="location.png" alt="Location Icon" style="width: 20px; height: 20px; v>
+                Indonesia
+                    </p>
+                    <div class="social-icons">
+                <a href="https://discord.com/invite/WrJzyHB2" target="_blank">
+                    <img src="discord.png" alt="Discord" />
+                </a>
+                <a href="https://t.me/F41c0nHX" target="_blank">
+                    <img src="telegram.png" alt="Telegram" />
+                </a>
+                <a href="https://chat.whatsapp.com/CkSqFRRqP8f9O1eHkYWmid" target="_blank">
+                    <img src="whatsapp.png" alt="WhatsApp" />
+                </a>
+            </div>
+            <a href="https://wa.me//+6287813039503" class="message-btn" target="_blank">Send Me>
+        </div>
+        <div>
+            <audio class="audio" controls loop>
+                <source src="sound.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
 </body>
 </html>
