@@ -18,6 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
         starField.appendChild(star);
     }
 
+    // Membuat planet
+    const planets = [
+        { className: 'planet one' },
+        { className: 'planet two' },
+        { className: 'planet three' },
+    ];
+
+    planets.forEach(planet => {
+        const planetDiv = document.createElement('div');
+        planetDiv.className = planet.className;
+        document.body.appendChild(planetDiv);
+    });
+
     // Menampilkan waktu ketika tombol ditekan
     document.getElementById('showTimeButton').addEventListener('click', () => {
         const now = new Date();
